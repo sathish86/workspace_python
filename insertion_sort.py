@@ -77,7 +77,32 @@ def insertion_sort(A):
         
         
 A = [13,12,11,10]
-insertion_sort(A)
-print A
+#insertion_sort(A)
+#print A
+
+def insert_sort1(ele_list):
+    chk_val = ele_list[-1]
+    
+    for i in range(len(ele_list)-2, -1, -1): # this loop max to zero value
+        if ele_list[i] > chk_val:
+            ele_list[i+1] = ele_list[i]
+            if i == 0:
+                ele_list[i] = chk_val
+            print " ".join(map(str,ele_list))
+        elif ele_list[i] < chk_val:
+            ele_list[i+1] = chk_val
+            print " ".join(map(str,ele_list))
+            break
+            
+a = [2, 4, 6, 8, 3]
+
+a = [1, 3 ,5 ,9 ,13, 22, 27, 35, 46, 51, 55, 83, 87, 23]
+
+print a
+insert_sort1(a)
+    
+    
+
+
 
 

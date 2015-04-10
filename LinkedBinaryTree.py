@@ -57,7 +57,11 @@ class LinkedBinaryTree():
         elif node._element < key:
             return self.search(key,node._right)
         
-    
+    def insert_input(self):
+        print "Enter a integer:"
+        a = input()
+        self.insert(a)
+        
     def insert(self,ele,node=None):
         """insert elements in binary tree using property"""
         if self._root is None:
@@ -227,6 +231,8 @@ class LinkedBinaryTree():
 if __name__ == "__main__":
     obj = LinkedBinaryTree()
     a= [10,5,17,8,2,20,25,1,30,4]
+    obj.insert_input()
+    #a = ['a','b','c']
     for i in a:
         obj.insert(i)
     
